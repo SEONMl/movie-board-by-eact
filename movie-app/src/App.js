@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios  from 'axios';
 import Movie from './Component/Movie.js';
 import './CSS/App.css';
@@ -20,13 +20,13 @@ function App() {
     },[]);
 
   return (
-    <section class="container">
+    <section className="container">
       {isLoading ?
-      ( <div class="loader">
-        <span class="loader__text">Loading...</span>
+      ( <div className="loader">
+        <span className="loader__text">Loading...</span>
         </div>
       ) : ( 
-        <div class="movies">
+        <div className="movies">
          {movies.map( movie => (
           <Movie
             key={movie.id}
