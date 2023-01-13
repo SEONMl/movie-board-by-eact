@@ -34,7 +34,8 @@ function App() {
             year={movie.year}
             title={movie.title}
             summary={movie.summary}
-            poster={movie.poster}
+            poster={movie.large_cover_image}
+            genres={movie.genres}
             />
           ))}
         </div>
