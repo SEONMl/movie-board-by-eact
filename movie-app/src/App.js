@@ -19,22 +19,27 @@ function App() {
     },[]);
 
   return (
-    <div className='App'>
-      {isLoading
-      ? 'Loading...'
-      : movies.map((movie)=>{
-        return (
+    <section class="container">
+      {isLoading ?
+      ( <div class="loader">
+        <span class="loader__text">Loading...</span>
+        </div>
+      ) : ( 
+        <div class="movies">
+         {movies.map( movie => (
           <Movie
-          key={movie.id}
+            key={movie.id}
             id={movie.id}
             year={movie.year}
             title={movie.title}
             summary={movie.summary}
             poster={movie.poster}
-          />
-        );
-      })}
-    </div>);
+            />
+          ))}
+        </div>
+        )}
+    </section>
+    );
 }
 
 export default App;
