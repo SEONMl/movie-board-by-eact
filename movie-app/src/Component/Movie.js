@@ -16,7 +16,6 @@ function Movie({title, year, summary, poster, genres}) {
                     })}
                 </ul>
             </div>
-            {poster}
         </div>
     );
 }
