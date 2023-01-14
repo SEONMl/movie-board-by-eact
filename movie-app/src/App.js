@@ -7,7 +7,7 @@ import About from './routes/About';
 function App() {
   return (
     <HashRouter>
-      <Route path='/home' component={Home} />
+      <Route path='/' exact={true} component={Home} />
       <Route path="/about" component={About} />
     </HashRouter>
   );
