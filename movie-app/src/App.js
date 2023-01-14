@@ -9,11 +9,11 @@ import Detail from "./routes/Detail";
 function App() {
   return (
     <HashRouter>
-      <Navigation />
+      <Navigation/>
       <Routes>
-        <Route path='/' exact={true} component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/movie-detail" component={Detail} />
+        <Route path='/' exact={true} element={<Home/>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/movie-detail" element={Detail} />
       </Routes>
     </HashRouter>
   );
